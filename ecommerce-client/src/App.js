@@ -4,15 +4,20 @@ import Home from './pages/Home';
 import NewArrivals from './pages/NewArrivals';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
+import Header from './components/nav/Header'
 
 const App = () => {
   return (
+    <>
+      <Header />
       <Switch>
-        <Route exact path = "/" component = { Home } />
-        <Route exact path = "/newarrivals" component = { NewArrivals } />
-        <Route exact path = "/login" component = { Login } />
-        <Route exact path = "/register" component = { Register } />
+          <Route exact path = "/" component = { Home } />
+          <Route exact path = "/newarrivals" component = { NewArrivals } />
+          <Route exact path = "/login" component = { Login } />
+          <Route exact path = "/register" component = { Register } />
       </Switch>
+    </>
+      
   );
 };
 
